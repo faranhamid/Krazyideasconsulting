@@ -1,0 +1,543 @@
+/* ========================================
+   LUXURY RESPONSIVE DESIGN
+   Mobile-First | Premium Experience Across All Devices
+   ======================================== */
+
+/* ========================================
+   1. LARGE DESKTOP (1400px+)
+   ======================================== */
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1600px;
+        padding: 0 var(--space-12);
+    }
+    
+    .hero-title {
+        font-size: clamp(4rem, 8vw, 8rem);
+    }
+    
+    .services-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
+    .results-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* ========================================
+   2. DESKTOP (1024px - 1399px)
+   ======================================== */
+@media (max-width: 1399px) and (min-width: 1024px) {
+    .container {
+        max-width: 1200px;
+        padding: 0 var(--space-8);
+    }
+    
+    .founder-content {
+        gap: var(--space-12);
+    }
+    
+    .founder-photo {
+        width: 350px;
+        height: 450px;
+    }
+}
+
+/* ========================================
+   3. TABLET LANDSCAPE (768px - 1023px)
+   ======================================== */
+@media (max-width: 1023px) and (min-width: 768px) {
+    /* Layout adjustments */
+    .container {
+        padding: 0 var(--space-6);
+    }
+    
+    .section {
+        padding: var(--space-24) 0;
+    }
+    
+    /* Typography scaling */
+    .hero-title {
+        font-size: var(--text-5xl);
+    }
+    
+    .section-title {
+        font-size: var(--text-4xl);
+    }
+    
+    /* Hero section */
+    .hero-section {
+        min-height: 700px;
+    }
+    
+    .hero-cta {
+        gap: var(--space-4);
+    }
+    
+    /* Founder section */
+    .founder-content {
+        grid-template-columns: 1fr;
+        gap: var(--space-12);
+        text-align: center;
+    }
+    
+    .founder-photo {
+        width: 300px;
+        height: 400px;
+        margin: 0 auto;
+    }
+    
+    .founder-stats {
+        justify-content: center;
+    }
+    
+    /* Services */
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--space-6);
+    }
+    
+    /* Results */
+    .results-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .result-card.featured {
+        grid-column: span 2;
+    }
+    
+    /* Client logos */
+    .logos-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    /* Navigation */
+    .nav-menu {
+        gap: var(--space-6);
+    }
+    
+    .nav-link {
+        font-size: var(--text-sm);
+    }
+}
+
+/* ========================================
+   4. TABLET PORTRAIT (480px - 767px)
+   ======================================== */
+@media (max-width: 767px) and (min-width: 480px) {
+    /* Container and spacing */
+    .container {
+        padding: 0 var(--space-4);
+    }
+    
+    .section {
+        padding: var(--space-16) 0;
+    }
+    
+    /* Typography */
+    .hero-title {
+        font-size: var(--text-4xl);
+        line-height: var(--leading-tight);
+    }
+    
+    .section-title {
+        font-size: var(--text-3xl);
+    }
+    
+    .hero-subtitle {
+        font-size: var(--text-lg);
+    }
+    
+    /* Hero adjustments */
+    .hero-section {
+        min-height: 600px;
+        text-align: center;
+    }
+    
+    .hero-cta {
+        flex-direction: column;
+        align-items: center;
+        gap: var(--space-4);
+    }
+    
+    .btn-large {
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    /* Navigation mobile */
+    .nav-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.95);
+        backdrop-filter: blur(20px);
+        flex-direction: column;
+        padding: var(--space-6);
+        border-top: var(--border-width) solid var(--border-color);
+        box-shadow: var(--shadow-xl);
+    }
+    
+    .nav-menu.active {
+        display: flex;
+    }
+    
+    .nav-link {
+        padding: var(--space-4) 0;
+        border-bottom: var(--border-width) solid var(--border-color);
+        text-align: center;
+        font-size: var(--text-base);
+    }
+    
+    .nav-link:last-child {
+        border-bottom: none;
+    }
+    
+    .nav-cta {
+        display: none;
+    }
+    
+    .nav-toggle {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        cursor: pointer;
+        padding: var(--space-2);
+    }
+    
+    .nav-toggle span {
+        width: 25px;
+        height: 3px;
+        background: var(--text-primary);
+        transition: var(--transition-fast);
+        border-radius: 2px;
+    }
+    
+    .nav-toggle.active span:nth-child(1) {
+        transform: rotate(45deg) translate(6px, 6px);
+    }
+    
+    .nav-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .nav-toggle.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(6px, -6px);
+    }
+    
+    /* Founder section */
+    .founder-photo {
+        width: 250px;
+        height: 320px;
+    }
+    
+    .founder-stats {
+        grid-template-columns: 1fr;
+        gap: var(--space-4);
+    }
+    
+    /* Services */
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-6);
+    }
+    
+    .service-card {
+        padding: var(--space-6);
+    }
+    
+    /* Results */
+    .results-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .result-card.featured {
+        grid-column: span 1;
+        transform: none;
+    }
+    
+    .result-card.featured:hover {
+        transform: translateY(-5px);
+    }
+    
+    /* Client logos */
+    .logos-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--space-4);
+    }
+    
+    /* CTA section */
+    .cta-title {
+        font-size: var(--text-4xl);
+    }
+    
+    .cta-actions {
+        gap: var(--space-6);
+    }
+}
+
+/* ========================================
+   5. MOBILE (320px - 479px)
+   ======================================== */
+@media (max-width: 479px) {
+    /* Ultra-compact spacing */
+    .container {
+        padding: 0 var(--space-4);
+    }
+    
+    .section {
+        padding: var(--space-12) 0;
+    }
+    
+    /* Typography - mobile optimized */
+    .hero-title {
+        font-size: var(--text-3xl);
+        line-height: var(--leading-tight);
+    }
+    
+    .section-title {
+        font-size: var(--text-2xl);
+    }
+    
+    .hero-subtitle {
+        font-size: var(--text-base);
+    }
+    
+    /* Hero mobile */
+    .hero-section {
+        min-height: 500px;
+        padding: var(--space-8) 0;
+    }
+    
+    .hero-content {
+        padding-top: 80px; /* Account for fixed nav */
+    }
+    
+    /* Navigation ultra-compact */
+    .main-nav {
+        padding: var(--space-4) 0;
+    }
+    
+    .nav-logo {
+        font-size: var(--text-lg);
+    }
+    
+    /* Founder section mobile */
+    .founder-photo {
+        width: 200px;
+        height: 280px;
+    }
+    
+    .bio-highlight {
+        font-size: var(--text-lg);
+    }
+    
+    .founder-bio p {
+        font-size: var(--text-base);
+    }
+    
+    /* Service cards mobile */
+    .service-card {
+        padding: var(--space-4);
+    }
+    
+    .service-title {
+        font-size: var(--text-xl);
+    }
+    
+    .service-description {
+        font-size: var(--text-base);
+    }
+    
+    /* Results mobile */
+    .result-metric {
+        font-size: var(--text-3xl);
+    }
+    
+    .result-card.featured .result-metric {
+        font-size: var(--text-4xl);
+    }
+    
+    /* Client logos mobile */
+    .logos-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    /* CTA mobile */
+    .cta-title {
+        font-size: var(--text-3xl);
+    }
+    
+    .cta-subtitle {
+        font-size: var(--text-lg);
+    }
+    
+    /* Footer mobile */
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: var(--space-8);
+        text-align: center;
+    }
+    
+    .footer-bottom {
+        flex-direction: column;
+        gap: var(--space-4);
+        text-align: center;
+    }
+}
+
+/* ========================================
+   6. ULTRA-WIDE SCREENS (1600px+)
+   ======================================== */
+@media (min-width: 1600px) {
+    .container {
+        max-width: 1800px;
+    }
+    
+    .hero-title {
+        font-size: clamp(5rem, 10vw, 10rem);
+    }
+    
+    .section {
+        padding: var(--space-48) 0;
+    }
+}
+
+/* ========================================
+   7. HIGH DPI / RETINA DISPLAYS
+   ======================================== */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    /* Sharper borders and shadows for high DPI */
+    .service-card,
+    .result-card {
+        border-width: 0.5px;
+    }
+    
+    /* Enhanced gold effects on retina */
+    .text-gradient-gold {
+        background-size: 200% 200%;
+    }
+}
+
+/* ========================================
+   8. LANDSCAPE ORIENTATION
+   ======================================== */
+@media (orientation: landscape) and (max-height: 600px) {
+    .hero-section {
+        min-height: 100vh;
+    }
+    
+    .hero-content {
+        padding-top: 60px;
+    }
+    
+    .hero-title {
+        font-size: var(--text-4xl);
+    }
+}
+
+/* ========================================
+   9. ACCESSIBILITY & MOTION PREFERENCES
+   ======================================== */
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    .hero-title span,
+    .hero-subtitle,
+    .hero-cta {
+        animation: none;
+        opacity: 1;
+        transform: none;
+    }
+    
+    .service-card:hover,
+    .result-card:hover {
+        transform: none;
+    }
+}
+
+/* High contrast mode */
+@media (prefers-contrast: high) {
+    .service-card,
+    .result-card {
+        border-width: var(--border-width-thick);
+    }
+    
+    .btn {
+        border-width: var(--border-width-thick);
+    }
+}
+
+/* Dark mode support (if system preference) */
+@media (prefers-color-scheme: dark) {
+    /* Already dark by default, but ensure consistency */
+    :root {
+        color-scheme: dark;
+    }
+}
+
+/* ========================================
+   10. PRINT STYLES
+   ======================================== */
+@media print {
+    .main-nav,
+    .hero-scroll,
+    .nav-toggle,
+    .cta-section {
+        display: none;
+    }
+    
+    .hero-section {
+        min-height: auto;
+        padding: var(--space-8) 0;
+    }
+    
+    .section {
+        padding: var(--space-8) 0;
+        break-inside: avoid;
+    }
+    
+    .service-card,
+    .result-card {
+        break-inside: avoid;
+        box-shadow: none;
+        border: var(--border-width) solid #333;
+    }
+}
+
+/* ========================================
+   11. TOUCH DEVICE OPTIMIZATIONS
+   ======================================== */
+@media (hover: none) and (pointer: coarse) {
+    /* Touch-friendly button sizes */
+    .btn {
+        min-height: 48px;
+        padding: var(--space-4) var(--space-6);
+    }
+    
+    .nav-link {
+        min-height: 48px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    /* Reduce hover effects on touch devices */
+    .service-card:hover,
+    .result-card:hover {
+        transform: none;
+    }
+    
+    /* Larger touch targets */
+    .nav-toggle {
+        min-width: 48px;
+        min-height: 48px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}

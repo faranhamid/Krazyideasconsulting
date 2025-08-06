@@ -1,0 +1,392 @@
+/* ========================================
+   LUXURY ANIMATIONS - PREMIUM EFFECTS
+   Smooth, Sophisticated, Powerful
+   ======================================== */
+
+/* ========================================
+   1. SCROLL-TRIGGERED ANIMATIONS
+   ======================================== */
+
+/* Base animation states */
+[data-aos] {
+    opacity: 0;
+    transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+[data-aos="fade-up"] {
+    transform: translateY(40px);
+}
+
+[data-aos="fade-down"] {
+    transform: translateY(-40px);
+}
+
+[data-aos="fade-left"] {
+    transform: translateX(40px);
+}
+
+[data-aos="fade-right"] {
+    transform: translateX(-40px);
+}
+
+[data-aos="zoom-in"] {
+    transform: scale(0.9);
+}
+
+[data-aos="zoom-out"] {
+    transform: scale(1.1);
+}
+
+[data-aos="slide-up"] {
+    transform: translateY(60px);
+}
+
+[data-aos="slide-left"] {
+    transform: translateX(60px);
+}
+
+[data-aos="flip-up"] {
+    transform: rotateX(60deg);
+    transform-origin: center bottom;
+}
+
+/* Animated states */
+.aos-animate[data-aos] {
+    opacity: 1;
+    transform: translate(0, 0) scale(1) rotateX(0);
+}
+
+/* ========================================
+   2. HOVER & INTERACTIVE ANIMATIONS
+   ======================================== */
+
+/* Luxury button effects */
+.btn {
+    position: relative;
+    overflow: hidden;
+    transform: translateZ(0);
+}
+
+.btn::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.6s ease, height 0.6s ease;
+}
+
+.btn:hover::after {
+    width: 300px;
+    height: 300px;
+}
+
+.btn-primary:hover {
+    box-shadow: 
+        0 0 30px rgba(212, 175, 55, 0.4),
+        0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* Card hover effects */
+.service-card,
+.result-card {
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.service-card:hover {
+    transform: translateY(-12px) scale(1.02);
+}
+
+.result-card:hover {
+    transform: translateY(-8px) scale(1.02);
+}
+
+/* Navigation link effects */
+.nav-link {
+    position: relative;
+    overflow: hidden;
+}
+
+.nav-link::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.1), transparent);
+    transition: left 0.5s ease;
+}
+
+.nav-link:hover::before {
+    left: 100%;
+}
+
+/* ========================================
+   3. LOADING & ENTRANCE ANIMATIONS
+   ======================================== */
+
+/* Page load animation */
+@keyframes page-fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+body {
+    animation: page-fade-in 0.8s ease-out;
+}
+
+/* Stagger animation for grids */
+.services-grid .service-card {
+    animation: card-entrance 0.6s ease-out both;
+}
+
+.services-grid .service-card:nth-child(1) { animation-delay: 0.1s; }
+.services-grid .service-card:nth-child(2) { animation-delay: 0.2s; }
+.services-grid .service-card:nth-child(3) { animation-delay: 0.3s; }
+.services-grid .service-card:nth-child(4) { animation-delay: 0.4s; }
+
+@keyframes card-entrance {
+    from {
+        opacity: 0;
+        transform: translateY(30px) scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* Results grid animation */
+.results-grid .result-card {
+    animation: result-reveal 0.8s ease-out both;
+}
+
+.results-grid .result-card:nth-child(1) { animation-delay: 0.1s; }
+.results-grid .result-card:nth-child(2) { animation-delay: 0.2s; }
+.results-grid .result-card:nth-child(3) { animation-delay: 0.3s; }
+.results-grid .result-card:nth-child(4) { animation-delay: 0.4s; }
+
+@keyframes result-reveal {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ========================================
+   4. BACKGROUND & AMBIENT ANIMATIONS
+   ======================================== */
+
+/* Subtle background movement */
+@keyframes ambient-float {
+    0%, 100% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    33% {
+        transform: translateY(-10px) rotate(1deg);
+    }
+    66% {
+        transform: translateY(5px) rotate(-1deg);
+    }
+}
+
+.hero-background::before {
+    animation: ambient-float 20s ease-in-out infinite;
+}
+
+/* Gold accent pulse */
+@keyframes gold-pulse {
+    0%, 100% {
+        box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+    }
+    50% {
+        box-shadow: 0 0 40px rgba(212, 175, 55, 0.6);
+    }
+}
+
+.text-gradient-gold {
+    animation: gold-shimmer 3s ease-in-out infinite;
+}
+
+@keyframes gold-shimmer {
+    0%, 100% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+}
+
+/* ========================================
+   5. SCROLL-BASED PARALLAX EFFECTS
+   ======================================== */
+
+/* Parallax scrolling for hero */
+.hero-background {
+    transform: translate3d(0, 0, 0);
+    will-change: transform;
+}
+
+/* Smooth scrolling enhancement */
+html {
+    scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    html {
+        scroll-behavior: smooth;
+    }
+}
+
+/* ========================================
+   6. MICRO-INTERACTIONS
+   ======================================== */
+
+/* Founder stats animation */
+.stat-number {
+    transition: all 0.3s ease;
+}
+
+.stat-item:hover .stat-number {
+    transform: scale(1.1);
+    color: var(--primary-light);
+}
+
+/* Client logo hover */
+.client-logo {
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.client-logo:hover {
+    transform: scale(1.05) translateY(-2px);
+}
+
+/* Service icon animation */
+.icon-placeholder {
+    transition: all 0.4s ease;
+}
+
+.service-card:hover .icon-placeholder {
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: var(--shadow-gold);
+}
+
+/* ========================================
+   7. MOBILE-OPTIMIZED ANIMATIONS
+   ======================================== */
+
+@media (max-width: 768px) {
+    /* Reduce animation intensity on mobile */
+    .service-card:hover {
+        transform: translateY(-6px) scale(1.01);
+    }
+    
+    .result-card:hover {
+        transform: translateY(-4px) scale(1.01);
+    }
+    
+    /* Faster transitions on mobile */
+    .btn {
+        transition: all 0.2s ease;
+    }
+    
+    [data-aos] {
+        transition: all 0.6s ease;
+    }
+}
+
+/* ========================================
+   8. PERFORMANCE OPTIMIZATIONS
+   ======================================== */
+
+/* GPU acceleration for smooth animations */
+.service-card,
+.result-card,
+.btn,
+.nav-link {
+    transform: translateZ(0);
+    backface-visibility: hidden;
+}
+
+/* Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* ========================================
+   9. LOADING STATES
+   ======================================== */
+
+/* Loading shimmer effect */
+@keyframes loading-shimmer {
+    0% {
+        background-position: -200px 0;
+    }
+    100% {
+        background-position: calc(200px + 100%) 0;
+    }
+}
+
+.loading-shimmer {
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200px 100%;
+    animation: loading-shimmer 1.5s infinite;
+}
+
+/* Success/Error animations */
+@keyframes success-bounce {
+    0%, 20%, 53%, 80%, 100% {
+        transform: translate3d(0, 0, 0);
+    }
+    40%, 43% {
+        transform: translate3d(0, -10px, 0);
+    }
+    70% {
+        transform: translate3d(0, -5px, 0);
+    }
+    90% {
+        transform: translate3d(0, -2px, 0);
+    }
+}
+
+.success-animation {
+    animation: success-bounce 1s ease;
+}
+
+@keyframes error-shake {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    10%, 30%, 50%, 70%, 90% {
+        transform: translateX(-5px);
+    }
+    20%, 40%, 60%, 80% {
+        transform: translateX(5px);
+    }
+}
+
+.error-animation {
+    animation: error-shake 0.6s ease;
+}
