@@ -277,6 +277,99 @@
     .cta-actions {
         gap: var(--space-6);
     }
+    
+    /* Tablet Portrait Mobile Fixes */
+    .contact-options {
+        grid-template-columns: 1fr;
+        gap: var(--space-6);
+    }
+    
+    .founder-content {
+        grid-template-columns: 1fr;
+        gap: var(--space-8);
+        text-align: center;
+    }
+    
+    .founder-image {
+        position: static;
+        order: -1;
+        margin-bottom: var(--space-6);
+    }
+    
+    .founder-stats {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--space-6);
+    }
+    
+    .timeline-item {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: var(--space-4);
+    }
+    
+    .timeline-marker {
+        margin-bottom: var(--space-4);
+    }
+    
+    .timeline-item::after {
+        display: none;
+    }
+    
+    .revenue-showcase {
+        grid-template-columns: 1fr;
+        gap: var(--space-8);
+        text-align: center;
+    }
+    
+    .revenue-breakdown {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--space-6);
+    }
+    
+    .services-methodology .methodology-steps {
+        grid-template-columns: 1fr;
+        gap: var(--space-8);
+    }
+    
+    .methodology-step::after {
+        display: none;
+    }
+    
+    .case-study-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-8);
+    }
+    
+    .industry-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--space-6);
+    }
+    
+    .case-highlights {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--space-6);
+    }
+    
+    .testimonial-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-8);
+    }
+    
+    .intro-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-8);
+    }
+    
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: var(--space-4);
+    }
+    
+    .btn-large {
+        width: 100%;
+        max-width: 320px;
+    }
 }
 
 /* ========================================
@@ -387,6 +480,101 @@
         flex-direction: column;
         gap: var(--space-4);
         text-align: center;
+    }
+    
+    /* New Components Mobile Fixes */
+    .contact-options {
+        grid-template-columns: 1fr !important;
+        gap: var(--space-4) !important;
+    }
+    
+    .founder-content {
+        grid-template-columns: 1fr !important;
+        gap: var(--space-8) !important;
+        text-align: center;
+    }
+    
+    .founder-image {
+        position: static !important;
+        order: -1;
+    }
+    
+    .founder-stats {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: var(--space-4) !important;
+    }
+    
+    .timeline-item {
+        grid-template-columns: 1fr !important;
+        text-align: center;
+    }
+    
+    .timeline-marker {
+        margin-bottom: var(--space-4);
+    }
+    
+    .timeline-item::after {
+        display: none;
+    }
+    
+    .revenue-showcase {
+        grid-template-columns: 1fr !important;
+        gap: var(--space-8) !important;
+        text-align: center;
+    }
+    
+    .revenue-breakdown {
+        grid-template-columns: 1fr !important;
+        gap: var(--space-4) !important;
+    }
+    
+    .services-methodology .methodology-steps {
+        grid-template-columns: 1fr !important;
+        gap: var(--space-6) !important;
+    }
+    
+    .methodology-step::after {
+        display: none;
+    }
+    
+    .case-study-grid {
+        grid-template-columns: 1fr !important;
+        gap: var(--space-6) !important;
+    }
+    
+    .industry-grid {
+        grid-template-columns: 1fr !important;
+        gap: var(--space-6) !important;
+    }
+    
+    .featured-cases {
+        margin-bottom: var(--space-12);
+    }
+    
+    .case-highlights {
+        grid-template-columns: 1fr !important;
+        gap: var(--space-4) !important;
+    }
+    
+    .testimonial-grid {
+        grid-template-columns: 1fr !important;
+        gap: var(--space-6) !important;
+    }
+    
+    .intro-grid {
+        grid-template-columns: 1fr !important;
+        gap: var(--space-6) !important;
+    }
+    
+    .cta-buttons {
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: var(--space-4) !important;
+    }
+    
+    .btn-large {
+        width: 100% !important;
+        max-width: 280px !important;
     }
 }
 

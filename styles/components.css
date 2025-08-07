@@ -1464,6 +1464,99 @@
     margin: 0;
 }
 
+/* Mobile-specific overrides for components */
+@media (max-width: 767px) {
+    .contact-options {
+        grid-template-columns: 1fr;
+        gap: var(--space-4);
+    }
+    
+    .founder-stats {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--space-4);
+    }
+    
+    .timeline-item {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: var(--space-4);
+    }
+    
+    .timeline-item::after {
+        display: none;
+    }
+    
+    .founder-content {
+        grid-template-columns: 1fr;
+        gap: var(--space-8);
+        text-align: center;
+    }
+    
+    .founder-image {
+        position: static;
+        order: -1;
+        margin-bottom: var(--space-6);
+    }
+    
+    .page-header {
+        padding: var(--space-8) 0 var(--space-6);
+    }
+    
+    .page-title {
+        font-size: var(--text-3xl);
+    }
+    
+    .page-subtitle {
+        font-size: var(--text-lg);
+    }
+    
+    .section {
+        padding: var(--space-12) 0;
+    }
+    
+    .section-title {
+        font-size: var(--text-2xl);
+    }
+    
+    .section-subtitle {
+        font-size: var(--text-base);
+    }
+    
+    /* Ensure text doesn't overflow on small screens */
+    .hero-title,
+    .section-title,
+    .page-title {
+        word-wrap: break-word;
+        hyphens: auto;
+    }
+    
+    /* Button adjustments */
+    .btn-large {
+        width: 100%;
+        max-width: 280px;
+        padding: var(--space-4) var(--space-6);
+        font-size: var(--text-base);
+    }
+    
+    /* Card spacing adjustments */
+    .service-card,
+    .result-card,
+    .testimonial-card {
+        padding: var(--space-6);
+        margin-bottom: var(--space-6);
+    }
+    
+    /* Ensure proper spacing between sections */
+    .intro-section,
+    .revenue-impact-section,
+    .services-section,
+    .results-section,
+    .founder-section,
+    .contact-section {
+        padding: var(--space-12) 0;
+    }
+}
+
 .contact-expectations {
     background: var(--background);
     padding: var(--space-10);
