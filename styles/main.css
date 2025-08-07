@@ -71,6 +71,7 @@
     --space-8: clamp(2rem, 2vw + 1.6rem, 3rem);
     --space-12: clamp(3rem, 3vw + 2.4rem, 4.5rem);
     --space-16: clamp(4rem, 4vw + 3.2rem, 6rem);
+    --space-20: clamp(5rem, 5vw + 4rem, 7.5rem);
     --space-24: clamp(6rem, 6vw + 4.8rem, 9rem);
     --space-32: clamp(8rem, 8vw + 6.4rem, 12rem);
     --space-48: clamp(12rem, 12vw + 9.6rem, 18rem);
@@ -135,7 +136,7 @@ body {
     color: var(--text-primary);
     background-color: var(--background);
     overflow-x: hidden;
-    padding-top: 80px; /* Account for fixed navigation */
+    padding-top: 100px; /* Account for fixed navigation + extra space */
 }
 
 /* Typography Hierarchy */

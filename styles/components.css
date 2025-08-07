@@ -1374,13 +1374,21 @@
     margin-bottom: var(--space-12);
 }
 
-.email-contact {
+.contact-options {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-8);
+    margin-bottom: var(--space-16);
+}
+
+.email-contact,
+.calendly-contact {
     background: var(--surface);
     padding: var(--space-12);
     border-radius: var(--radius-xl);
     border: var(--border-width) solid var(--border-color);
-    margin-bottom: var(--space-16);
     position: relative;
+    text-align: center;
 }
 
 .email-contact::before {
@@ -1394,7 +1402,18 @@
     border-radius: var(--radius-xl) var(--radius-xl) 0 0;
 }
 
-.email-label {
+.calendly-contact::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary-light), var(--primary));
+    border-radius: var(--radius-xl) var(--radius-xl) 0 0;
+}
+
+.contact-method-title {
     font-size: var(--text-base);
     color: var(--text-secondary);
     margin-bottom: var(--space-4);
@@ -1416,6 +1435,33 @@
 .email-address:hover {
     color: var(--primary-light);
     transform: scale(1.05);
+}
+
+.calendly-link {
+    display: inline-block;
+    font-size: var(--text-lg);
+    font-family: var(--font-display);
+    font-weight: var(--weight-bold);
+    color: var(--color-black);
+    background: linear-gradient(135deg, var(--primary), var(--primary-light));
+    padding: var(--space-4) var(--space-6);
+    border-radius: var(--radius-md);
+    text-decoration: none;
+    transition: var(--transition-medium);
+    margin-bottom: var(--space-4);
+}
+
+.calendly-link:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-gold);
+    opacity: 0.9;
+}
+
+.calendly-description {
+    font-size: var(--text-sm);
+    color: var(--text-secondary);
+    line-height: var(--leading-relaxed);
+    margin: 0;
 }
 
 .contact-expectations {
@@ -1491,4 +1537,37 @@
     line-height: var(--leading-relaxed);
     color: var(--text-secondary);
     margin: 0;
+}
+
+/* ========================================
+   14. RESPONSIVE STYLES FOR NEW COMPONENTS
+   ======================================== */
+@media (max-width: 768px) {
+    .contact-options {
+        grid-template-columns: 1fr;
+        gap: var(--space-6);
+    }
+    
+    .founder-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .timeline-item {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .timeline-marker {
+        margin-bottom: var(--space-4);
+    }
+    
+    .founder-content {
+        grid-template-columns: 1fr;
+        gap: var(--space-12);
+    }
+    
+    .founder-image {
+        position: static;
+        order: -1;
+    }
 }
